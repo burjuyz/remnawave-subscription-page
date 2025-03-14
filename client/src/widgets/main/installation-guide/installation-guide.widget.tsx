@@ -44,8 +44,12 @@ export const InstallationGuideWidget = () => {
         window.open(`clash://install-config?url=${subscriptionUrl}`, '_blank')
     };
 
-    const opensingbox = () => {
-        window.open(`sing-box://import-remote-profile?url=${subscriptionUrl}`, '_blank');
+    const openv2rayng = () => {
+        window.open(`v2rayng://install-sub/?url=${subscriptionUrl}`, '_blank');
+    };
+
+    const openstreisand = () => {
+        window.open(`streisand://import/${subscriptionUrl}`, '_blank');
     };
     
     return (
@@ -75,19 +79,28 @@ export const InstallationGuideWidget = () => {
                                 <IconDownload size={16} />
                             </ThemeIcon>
                         }
-                        title={t('installation-guide.widget.install-clashmeta')}
+                        title={t('installation-guide.widget.install-v2rayng')}
                     >
                         <Text c="dimmed" mb={16} size="sm">
-                            {t('installation-guide.widget.open-github')}
+                            {t('installation-guide.widget.open-v2rayng')}
                         </Text>
                         <Button
                             component="a"
-                            href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.7/cmfa-2.11.7-meta-universal-release.apk"
+                            href="https://play.google.com/store/apps/details?id=com.v2ray.ang"
                             leftSection={<IconExternalLink size={16} />}
                             target="_blank"
                             variant="light"
                         >
-                            {t('installation-guide.widget.download-github')}
+                            {t('installation-guide.widget.open-in-google-play')}
+                        </Button>
+                        <Button
+                            component="a"
+                            href="https://github.com/2dust/v2rayNG/releases/download/1.9.31/v2rayNG_1.9.31_arm64-v8a.apk"
+                            leftSection={<IconExternalLink size={16} />}
+                            target="_blank"
+                            variant="light"
+                        >
+                            {t('installation-guide.widget.download-huawei')}
                         </Button>
                     </Timeline.Item>
 
@@ -100,9 +113,9 @@ export const InstallationGuideWidget = () => {
                         title={t('installation-guide.widget.add-subscription')}
                     >
                         <Text c="dimmed" mb={16} size="sm">
-                            {t('installation-guide.widget.add-subscription-description-clashmeta')}
+                            {t('installation-guide.widget.add-subscription-description-v2rayng')}
                         </Text>
-                        <Button onClick={openclash} variant="filled">
+                        <Button onClick={openv2rayng} variant="filled">
                             {t('installation-guide.widget.add-subscription-button')}
                         </Button>
                     </Timeline.Item>
@@ -116,7 +129,7 @@ export const InstallationGuideWidget = () => {
                         title={t('installation-guide.widget.connect-and-use')}
                     >
                         <Text c="dimmed" size="sm">
-                            {t('installation-guide.widget.connect-and-use-description-clashmeta')}
+                            {t('installation-guide.widget.connect-and-use-description-v2rayng')}
                         </Text>
                     </Timeline.Item>
                 </Timeline>
@@ -130,14 +143,14 @@ export const InstallationGuideWidget = () => {
                                 <IconDownload size={16} />
                             </ThemeIcon>
                         }
-                        title={t('installation-guide.widget.install-singbox')}
+                        title={t('installation-guide.widget.install-streisand')}
                     >
                         <Text c="dimmed" mb={16} size="sm">
                             {t('installation-guide.widget.install-app-store-description')}
                         </Text>
                         <Button
                             component="a"
-                            href="https://apps.apple.com/app/sing-box-vt/id6673731168"
+                            href="https://apps.apple.com/us/app/streisand/id6450534064"
                             leftSection={<IconExternalLink size={16} />}
                             target="_blank"
                             variant="light"
@@ -157,7 +170,7 @@ export const InstallationGuideWidget = () => {
                         <Text c="dimmed" mb={16} size="sm">
                             {t('installation-guide.widget.add-ios-subscription-description')}
                         </Text>
-                        <Button onClick={opensingbox} variant="filled">
+                        <Button onClick={openstreisand} variant="filled">
                             {t('installation-guide.widget.add-subscription-button')}
                         </Button>
                     </Timeline.Item>
@@ -171,7 +184,7 @@ export const InstallationGuideWidget = () => {
                         title={t('installation-guide.widget.connect-and-use')}
                     >
                         <Text c="dimmed" size="sm">
-                            {t('installation-guide.widget.connect-and-use-description-singbox')}
+                            {t('installation-guide.widget.connect-and-use-description-streisand')}
                         </Text>
                     </Timeline.Item>
                 </Timeline>
@@ -193,39 +206,12 @@ export const InstallationGuideWidget = () => {
                         <Group>
                             <Button
                                 component="a"
-                                href="https://github.com/chen08209/FlClash/releases/download/v0.8.80/FlClash-0.8.80-windows-amd64-setup.exe"
+                                href="https://github.com/chen08209/FlClash/releases/latest"
                                 leftSection={<IconExternalLink size={16} />}
                                 target="_blank"
                                 variant="light"
                             >
-                                Windows
-                            </Button>
-                            <Button
-                                component="a"
-                                href="https://github.com/chen08209/FlClash/releases/download/v0.8.80/FlClash-0.8.80-macos-arm64.dmg"
-                                leftSection={<IconExternalLink size={16} />}
-                                target="_blank"
-                                variant="light"
-                            >
-                                macOS Apple Silicon
-                            </Button>
-                            <Button
-                                component="a"
-                                href="https://github.com/chen08209/FlClash/releases/download/v0.8.80/FlClash-0.8.80-macos-amd64.dmg"
-                                leftSection={<IconExternalLink size={16} />}
-                                target="_blank"
-                                variant="light"
-                            >
-                                macOS Intel x64
-                            </Button>
-                            <Button
-                                component="a"
-                                href="https://github.com/chen08209/FlClash/releases/download/v0.8.80/FlClash-0.8.80-linux-amd64.AppImage"
-                                leftSection={<IconExternalLink size={16} />}
-                                target="_blank"
-                                variant="light"
-                            >
-                                Linux
+                                {t('installation-guide.widget.download')}
                             </Button>
                         </Group>
                     </Timeline.Item>

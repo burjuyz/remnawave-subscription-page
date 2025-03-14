@@ -8,6 +8,14 @@
     },
     "installation-guide": {
         "widget": {
+            "download": "Download",
+            "install-streisand": "Install and open Streisand",
+            "connect-and-use-description-streisand": "In the main section, click the large power button in the center to connect to the VPN. If needed, choose a different server by clicking '>' at the bottom. Enjoy :)",
+            "download-huawei": "Download for Huawei",
+            "install-v2rayng": "Install and open v2rayNG",
+            "open-v2rayng": "Open the page in Google Play and install the app. For Huawei phones, download from the link. Launch it and proceed to step #2",
+            "add-subscription-description-v2rayng": "Click the button below—the app will open and the subscription will be added automatically.",
+            "connect-and-use-description-v2rayng": "In the v2rayNG app, on the main screen, click the three dots in the top right and select 'Update group subscription.' After that, available servers will appear in the list.",
             "install-clashmeta": "Install and open Clash Meta",
             "add-subscription-description-clashmeta": "Click the button below to open the profile creation window. You will need to specify the auto-update period, for example, 720 minutes. Click the Save button in the top right corner.",
             "connect-and-use-description-clashmeta": "Go to the Profiles section and select the created profile, then return to the main page. Now you can connect by clicking the Stopped button.",
